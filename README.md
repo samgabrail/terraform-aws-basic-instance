@@ -1,2 +1,2 @@
 # terraform-aws-basic-instance
-Basic Instance deployment on AWS
+Basic AWS Instance deployment with terraform
