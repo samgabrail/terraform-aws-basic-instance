@@ -33,14 +33,7 @@ resource "aws_subnet" "tfe_subnet" {
   }
 }
 
-resource "aws_network_interface" "web" {
-  subnet_id   = aws_subnet.tfe_subnet.id
-  private_ips = ["172.16.10.100"]
 
-  tags = {
-    Name = "primary_network_interface"
-  }
-}
 
 resource "aws_instance" "web" {
   ami           = "ami-22b9a343" # us-west-2
