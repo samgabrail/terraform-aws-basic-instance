@@ -3,11 +3,11 @@ variable "prefix" {
 }
 
 variable "availability_zone" {
-  default = "eu-west-2a"
+  default = "us-west-2a"
 }
 
 variable "aws_region" {
-  default = "eu-west-2"
+  default = "us-west-2"
 }
 
 provider "aws" {
