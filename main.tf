@@ -51,6 +51,6 @@ resource "aws_instance" "web" {
 }
 
 output "server_ip" {
-  value = "The public IP address of the web server instance: ${aws_instance.web.*.public_ip}"
+  value = ["The public IP address of the web server instance: ${aws_instance.web.*.public_ip}"]
   description = "The public IP address of the web server instance."
 }
