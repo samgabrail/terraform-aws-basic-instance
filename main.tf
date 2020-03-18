@@ -20,6 +20,7 @@ resource "aws_vpc" "tfe_vpc" {
 
   tags = {
     Name = "${var.prefix}-test"
+    owner = var.prefix
   }
 }
 
@@ -30,6 +31,7 @@ resource "aws_subnet" "tfe_subnet" {
 
   tags = {
     Name = "${var.prefix}-test"
+    owner = var.prefix
   }
 }
 
@@ -39,6 +41,7 @@ resource "aws_network_interface" "web" {
 
   tags = {
     Name = "primary_network_interface"
+    owner = var.prefix
   }
 }
 
@@ -48,9 +51,13 @@ resource "aws_instance" "web" {
 
 
   associate_public_ip_address = true
+  tags = {
+  Name = "primary_network_interface"
+  owner = var.prefix
+  }
 }
 
 output "server_ip" {
-  value = ["The public IP address of the web server instance: ${aws_instance.web.*.public_ip}"]
+  value = ["${aws_instance.web.*.public_ip}"]
   description = "The public IP address of the web server instance."
 }
