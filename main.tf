@@ -48,8 +48,6 @@ resource "aws_network_interface" "web" {
 resource "aws_instance" "web" {
   ami           = "ami-22b9a343" # us-west-2
   instance_type = "t2.micro"
-
-
   associate_public_ip_address = true
   tags = {
   Name = "${var.prefix}-test"
