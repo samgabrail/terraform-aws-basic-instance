@@ -8,7 +8,7 @@ resource "random_pet" "this" {
 
 resource "aws_kms_key" "mykey" {
   description             = "This key is used to encrypt bucket objects"
-  deletion_window_in_days = 1
+  deletion_window_in_days = 7
   tags = {
     owner = var.prefix
   }  
