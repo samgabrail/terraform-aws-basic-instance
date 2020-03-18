@@ -52,7 +52,7 @@ resource "aws_instance" "web" {
 
   associate_public_ip_address = true
   tags = {
-  Name = "${var.prefix-test}"
+  Name = "${var.prefix}-test"
   owner = var.prefix
   }
 }
