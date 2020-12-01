@@ -10,11 +10,6 @@ variable "aws_region" {
   default = "us-west-2"
 }
 
-provider "aws" {
-  version = "~> 2.0"
-  region  = var.aws_region
-}
-
 variable "instance_type" {
   description = "type of EC2 instance to provision."
   default = "t2.micro"
