@@ -44,7 +44,6 @@ resource "aws_instance" "web" {
   instance_type = "t2.nano"
   associate_public_ip_address = true
   tags = local.common_tags
-  }
 }
 
 output "server_ip" {
