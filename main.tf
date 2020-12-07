@@ -3,20 +3,20 @@ terraform {
 }
 
 provider aws {
-  region = var.aws_region
+  region = var.aws-region
 }
 
 locals {
   common_tags = {
     owner = var.owner
-    se-region = var.se_region
+    se-region = var.se-region
     purpose = var.purpose
     ttl = var.ttl #-1 must has justification as purpose
     terraform = var.terraform
     creator = var.name
     customer = var.customer
-    tfe-workspace = var.tfe_workspace
-    lifecycle-action = var.lifecycle_action
+    tfe-workspace = var.tfe-workspace
+    lifecycle-action = var.lifecycle-action
     Name = "${var.owner}-{var.purpose}-{var.customer}" 
   }
 }
