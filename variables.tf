@@ -2,15 +2,15 @@ variable "prefix" {
   default = "tfe"
 }
 
-variable "availability_zone" {
+variable "availability-zone" {
   default = "us-west-2a"
 }
 
-variable "aws_region" {
+variable "aws-region" {
   default = "us-west-2"
 }
 
-variable "instance_type" {
+variable "instance-type" {
   description = "type of EC2 instance to provision."
   default = "t2.micro"
 }
@@ -30,7 +30,7 @@ variable "ttl" {
   default = "4"
 }
 
-variable "se_region" {
+variable "se-region" {
   description = "SE region assigned"
   default = "public-sector"
 }
@@ -50,12 +50,12 @@ variable "customer" {
   default = ""
 }
 
-variable "tfe_workspace" {
+variable "tfe-workspace" {
   description = "TFE Workspace"
   default = ""
 }
 
-variable "lifecycle_action" {
+variable "lifecycle-action" {
   description = "stop or terminate (default)"
   default = "terminate"
 }
