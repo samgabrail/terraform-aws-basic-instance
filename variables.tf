@@ -2,15 +2,15 @@ variable "prefix" {
   default = "tfe"
 }
 
-variable "availability-zone" {
+variable "availability_zone" {
   default = "us-west-2a"
 }
 
-variable "aws-region" {
+variable "aws_region" {
   default = "us-west-2"
 }
 
-variable "instance-type" {
+variable "instance_type" {
   description = "type of EC2 instance to provision."
   default = "t2.micro"
 }
