@@ -3,11 +3,11 @@ variable "prefix" {
 }
 
 variable "availability_zone" {
-  default = "us-east1a"
+  default = "us-east-1a"
 }
 
 variable "aws_region" {
-  default = "us-east1"
+  default = "us-east-1"
 }
 
 variable "instance_type" {
@@ -52,7 +52,7 @@ variable "customer" {
 
 variable "tfc-workspace" {
   description = "TFC Workspace"
-  default = "terraform-aws-basic-instance"
+  default = ""
 }
 
 variable "lifecycle-action" {
