@@ -1,5 +1,5 @@
 variable "prefix" {
-  default = "tfe"
+  default = "tfc"
 }
 
 variable "availability_zone" {
@@ -17,12 +17,12 @@ variable "instance_type" {
 
 variable "name" {
   description = "name to pass to name tag"
-  default = "Larry Eichenbaum"
+  default = "Sam Gabrail"
 }
 
 variable "owner" {
   description = "name to pass to owner tag"
-  default = "larryebaum"
+  default = "samgabrail"
 }
 
 variable "ttl" {
@@ -50,8 +50,8 @@ variable "customer" {
   default = ""
 }
 
-variable "tfe-workspace" {
-  description = "TFE Workspace"
+variable "tfc-workspace" {
+  description = "TFC Workspace"
   default = ""
 }
 
