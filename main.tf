@@ -22,8 +22,24 @@ locals {
     customer = var.customer
     tfc-workspace = var.tfc-workspace
     lifecycle-action = var.lifecycle-action
-    Name = "${var.owner}-{var.purpose}-{var.customer}" 
+    Name = "${var.prefix}-${var.owner}-${var.purpose}-${var.customer}" 
   }
+}
+
+data "aws_ami" "ubuntu" {
+  most_recent = true
+
+  filter {
+    name = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+
+  owners = ["099720109477"] # Canonical
 }
 
 resource "aws_vpc" "tfc_vpc" {
@@ -45,8 +61,8 @@ resource "aws_network_interface" "web" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "ami-22b9a343" # us-west-2
-  instance_type = "t2.nano"
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = var.instance_type
   associate_public_ip_address = true
   tags = local.common_tags
 }

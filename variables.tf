@@ -1,5 +1,5 @@
 variable "prefix" {
-  default = "samg"
+  default = "tfc"
 }
 
 variable "availability_zone" {
@@ -12,7 +12,7 @@ variable "aws_region" {
 
 variable "instance_type" {
   description = "type of EC2 instance to provision."
-  default = "t2.micro"
+  default = "t2.nano"
 }
 
 variable "name" {
@@ -47,12 +47,12 @@ variable "terraform" {
 
 variable "customer" {
   description = "Billable Customer"
-  default = ""
+  default = "test"
 }
 
 variable "tfc-workspace" {
   description = "TFC Workspace"
-  default = ""
+  default = "terraform-aws-basic-instance"
 }
 
 variable "lifecycle-action" {
