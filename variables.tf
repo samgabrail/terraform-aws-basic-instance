@@ -1,5 +1,5 @@
 variable "prefix" {
-  default = "tfc"
+  default = "samg"
 }
 
 variable "availability_zone" {
